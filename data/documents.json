@@ -1,0 +1,47 @@
+[
+  {
+    "id": "doc-001",
+    "content": "Artificial Intelligence (AI) is transforming how we work and live. Machine learning algorithms can learn from data and make predictions without being explicitly programmed. Deep learning uses neural networks inspired by the human brain to process complex patterns in large amounts of data.",
+    "metadata": {
+      "source": "knowledge_base",
+      "category": "technology",
+      "date": "2024-01-01"
+    }
+  },
+  {
+    "id": "doc-002",
+    "content": "Cloud computing provides on-demand computing resources and services over the internet. Major cloud providers include AWS, Google Cloud, and Microsoft Azure. Benefits include scalability, cost efficiency, and accessibility from anywhere.",
+    "metadata": {
+      "source": "knowledge_base",
+      "category": "technology",
+      "date": "2024-01-02"
+    }
+  },
+  {
+    "id": "doc-003",
+    "content": "Cybersecurity is the practice of protecting systems and networks from digital attacks. Common threats include malware, phishing, ransomware, and zero-day exploits. Best practices include using strong passwords, multi-factor authentication, and keeping software updated.",
+    "metadata": {
+      "source": "knowledge_base",
+      "category": "security",
+      "date": "2024-01-03"
+    }
+  },
+  {
+    "id": "doc-004",
+    "content": "Renewable energy sources like solar and wind power are becoming increasingly important. Solar panels convert sunlight directly into electricity, while wind turbines harness wind energy. These sustainable alternatives help reduce carbon emissions and combat climate change.",
+    "metadata": {
+      "source": "knowledge_base",
+      "category": "environment",
+      "date": "2024-01-04"
+    }
+  },
+  {
+    "id": "doc-005",
+    "content": "Blockchain technology is a distributed ledger system that records transactions across a network of computers. It's the underlying technology behind cryptocurrencies like Bitcoin and Ethereum. Key features include immutability, transparency, and decentralization.",
+    "metadata": {
+      "source": "knowledge_base",
+      "category": "technology",
+      "date": "2024-01-05"
+    }
+  }
+]

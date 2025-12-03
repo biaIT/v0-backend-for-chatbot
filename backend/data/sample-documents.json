@@ -1,0 +1,28 @@
+{
+  "documents": [
+    {
+      "id": "sample_ai_001",
+      "title": "Introduction to Artificial Intelligence",
+      "filename": "sample_ai.pdf",
+      "content": "Artificial Intelligence (AI) is the simulation of human intelligence processes by computer systems. These processes include learning, reasoning, problem-solving, perception, and language understanding. AI can be categorized into two main types: Narrow AI (weak AI), which is designed to perform a specific task, and General AI (strong AI), which has the capability to understand and apply knowledge across different domains. Machine Learning is a subset of AI that enables systems to learn and improve from experience without being explicitly programmed. Deep Learning, another subset of ML, uses artificial neural networks with multiple layers (hence 'deep') to process data.",
+      "pages": 45,
+      "chunks": 150
+    },
+    {
+      "id": "sample_marketing_001",
+      "title": "Digital Marketing Strategies",
+      "filename": "sample_marketing.pdf",
+      "content": "Digital Marketing encompasses all marketing efforts using digital channels and internet-based technologies. Key channels include social media, email marketing, content marketing, search engine optimization (SEO), pay-per-click (PPC) advertising, and mobile marketing. Effective digital marketing requires understanding your target audience, creating valuable content, and leveraging data analytics to measure performance. Social Media Marketing involves building brand presence across platforms like Facebook, Instagram, Twitter, and LinkedIn. Content Marketing focuses on creating and distributing valuable, relevant content to attract and retain a clearly defined audience. SEO involves optimizing your website to rank higher in search engine results pages (SERPs).",
+      "pages": 38,
+      "chunks": 120
+    },
+    {
+      "id": "sample_finance_001",
+      "title": "Personal Finance and Investment Basics",
+      "filename": "sample_finance.pdf",
+      "content": "Personal finance involves managing your money, budgeting, saving, and investing. Key concepts include emergency funds (typically 3-6 months of expenses), retirement planning, and diversified investment portfolios. Investment types include stocks, bonds, mutual funds, and real estate. The stock market represents ownership in companies, while bonds are debt securities. Diversification reduces risk by spreading investments across different asset classes. Dollar-cost averaging is an investment strategy where you invest a fixed amount regularly, regardless of market conditions. Understanding concepts like compound interest, asset allocation, and risk tolerance is crucial for long-term financial success.",
+      "pages": 52,
+      "chunks": 180
+    }
+  ]
+}

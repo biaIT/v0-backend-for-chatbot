@@ -1,0 +1,102 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User model for authentication and account management
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  passwordHash String
+  role      String   @default("user") // "user" | "admin"
+  status    String   @default("pending") // "pending" | "approved" | "rejected"
+  
+  // Profile information
+  name      String?
+  avatarUrl String?
+  phone     String?
+  
+  // Timestamps
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  lastLoginAt DateTime?
+  approvedAt DateTime?
+  rejectedAt DateTime?
+  
+  // Usage statistics
+  totalQueries      Int @default(0)
+  totalPdfUploads   Int @default(0)
+  lastActiveAt      DateTime?
+  
+  // Relations
+  queryLogs QueryLog[]
+  documents Document[]
+  refreshTokens RefreshToken[]
+  
+  @@index([email])
+  @@index([status])
+}
+
+// Query logging model to track all user interactions
+model QueryLog {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  question  String
+  answer    String
+  intent    String
+  
+  // Source information
+  sourceType String? // "RAG" | "realtime" | "pdf" | "hybrid"
+  apiUsed String?
+  confidenceScore Float?
+  
+  // PDF documents used in this query
+  documentsUsed String[] @default([]) // Array of document IDs
+  
+  // Performance metrics
+  durationMs Int?
+  
+  createdAt DateTime @default(now())
+  
+  @@index([userId])
+  @@index([createdAt])
+}
+
+// Document model for user-uploaded PDFs
+model Document {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  documentName String
+  size          Int // in bytes
+  pageCount     Int?
+  vectorCount   Int @default(0) // number of embeddings created
+  
+  uploadedAt    DateTime @default(now())
+  
+  @@index([userId])
+}
+
+// Refresh token model for JWT token management
+model RefreshToken {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  
+  @@index([userId])
+  @@index([token])
+}
